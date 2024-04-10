@@ -15,11 +15,13 @@ class StudentController extends Controller
 
     public function index (){
 
-        return view('pages.student.index');
+        $response ['tasks'] = $this->task->all();
+        return view('pages.student.index')->with($response);
     }
 
     public function store(Request $request){
        $this->task->create($request->all());
 
+       return redirect()->route('student');
     }
 }

@@ -27,6 +27,35 @@
                 </div>
             </form>
         </div>
+
+        <div class="col-lg-12">
+            <div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach ($tasks as $key=> $task)
+
+                        <tr>
+                            <th scope="row">{{ ++$key }}</th>
+                            <td>{{ $task->name }}</td>
+                            <td>{{ $task->age }}</td>
+                            <td>{{ $task->status }}</td>
+                          </tr>
+
+                        @endforeach
+                    </tbody>
+                  </table>
+            </div>
+        </div>
     </div>
 </div>
 
