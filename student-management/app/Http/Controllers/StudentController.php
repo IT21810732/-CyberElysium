@@ -24,4 +24,10 @@ class StudentController extends Controller
 
        return redirect()->route('student');
     }
+
+    public function delete($task_id){
+        $task = $this->task->find($task_id);
+        $task->delete();
+        return redirect()->route('student');
+    }
 }
