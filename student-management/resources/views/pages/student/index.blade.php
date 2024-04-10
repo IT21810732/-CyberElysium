@@ -74,6 +74,8 @@
                             <td>
                                 <a href="{{ route('student.delete',$task->id) }}" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
                                 <a href="{{ route('student.status',$task->id) }}" class="btn btn-success"><i class="fas fa-check-circle"></i></a>
+                                <a href="javascript:void(0)" class="btn btn-info student-edit" data-task-id="{{ $task->id }}"><i class="fas fa-pencil-alt"></i></a>
+
                             </td>
                         </tr>
                         @endforeach
@@ -83,6 +85,20 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="studentEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studentEditLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="studentEditLabel">Edit Student</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="studentEditContent">
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 @endsection
 

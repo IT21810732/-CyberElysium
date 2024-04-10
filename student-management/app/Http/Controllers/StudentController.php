@@ -39,4 +39,19 @@ class StudentController extends Controller
 
         return redirect()->route('student');
     }
+
+    public function edit(Request $request){
+        $response ['task'] =  StudentFacde::get($request['task_id']);
+
+        return view('pages.student.edit')->with($response);
+
+    }
+
+    public function update(Request $request, $task_id){
+        $task = $this->task->find($task_id);
+        $task->update($request->all());
+
+        return redirect()->route('student');
+    }
+
 }
