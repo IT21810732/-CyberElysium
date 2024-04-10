@@ -8,13 +8,13 @@
                     </div>
             </div>
        </div>
-            
+
 @endsection
 
 @push('css')
 <style>
     .page-title{
-        padding-top: 10vh;
+        padding-top: 5vh;
         font-size: 4rem;
         color: #4b85bf;
     }
