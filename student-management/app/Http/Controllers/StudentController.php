@@ -28,6 +28,15 @@ class StudentController extends Controller
     public function delete($task_id){
         $task = $this->task->find($task_id);
         $task->delete();
+
+        return redirect()->route('student');
+    }
+
+    public function status($task_id){
+        $task = $this->task->find($task_id);
+        $task->status = 1;
+        $task->update();
+
         return redirect()->route('student');
     }
 }

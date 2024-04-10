@@ -73,6 +73,7 @@
 
                             <td>
                                 <a href="{{ route('student.delete',$task->id) }}" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                                <a href="{{ route('student.status',$task->id) }}" class="btn btn-success"><i class="fas fa-check-circle"></i></a>
                             </td>
                         </tr>
                         @endforeach
